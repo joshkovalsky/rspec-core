@@ -20,5 +20,3 @@ Feature: run with ruby command
       """
     When I run `ruby example_spec.rb`
     Then the output should contain "1 example, 0 failures"
-
-
