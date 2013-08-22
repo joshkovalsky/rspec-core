@@ -23,20 +23,20 @@ export JAVA_OPTS='-client -XX:+TieredCompilation -XX:TieredStopAtLevel=1'
 echo "Bundling Standalone so we can run the specs w/o bundler loaded"
 bundle install --standalone --binstubs
 
-echo "Running all..."
+# echo "Running all..."
 # bin/rspec spec -b --format progress --profile
 
-echo
-echo "--------------------------------------------------------------------"
-echo
+# echo
+# echo "--------------------------------------------------------------------"
+# echo
 
-if is_jruby; then
-  echo "Skipping one-by-one spec runs due to expensive JVM load time"
-else
-  for file in `find spec -iname '*_spec.rb'`; do
-    NO_COVERALLS=1 bin/rspec $file -b --format progress
-  done
-fi
+# if is_jruby; then
+#   echo "Skipping one-by-one spec runs due to expensive JVM load time"
+# else
+#   for file in `find spec -iname '*_spec.rb'`; do
+#     NO_COVERALLS=1 bin/rspec $file -b --format progress
+#   done
+# fi
 
 # Prepare RUBYOPT for scenarios that are shelling out to ruby,
 # and PATH for those that are using `rspec` or `rake`.
