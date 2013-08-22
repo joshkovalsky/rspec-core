@@ -24,7 +24,7 @@ echo "Bundling Standalone so we can run the specs w/o bundler loaded"
 bundle install --standalone --binstubs
 
 echo "Running all..."
-bin/rspec spec -b --format progress --profile
+# bin/rspec spec -b --format progress --profile
 
 echo
 echo "--------------------------------------------------------------------"
